@@ -1,0 +1,47 @@
+$separations: (0, 0.25vmax, 0.5vmax, 1vmax, 1.5vmax, 2vmax, 3vmax);
+$separationClasses: (
+    m: margin,
+    p: padding
+);
+
+@for $i from 1 through length($separations) {
+    $value: nth($separations, $i);
+    $index: $i - 1;
+
+    @each $id, $className in ($separationClasses) {
+        .#{$id}s-#{$index} {
+            #{$className}-left: #{$value} !important;
+        }
+
+        .#{$id}e-#{$index} {
+            #{$className}-right: #{$value} !important;
+        }
+
+        .#{$id}t-#{$index} {
+            #{$className}-top: #{$value} !important;
+        }
+
+        .#{$id}b-#{$index} {
+            #{$className}-bottom: #{$value} !important;
+        }
+
+        .#{$id}-#{$index} {
+            @extend .#{$id}s-#{$index};
+            @extend .#{$id}e-#{$index};
+            @extend .#{$id}t-#{$index};
+            @extend .#{$id}b-#{$index};
+        }
+    }
+}
+
+.me-auto {
+    margin-right: auto;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.d-inline-block {
+    display: inline-block;
+}

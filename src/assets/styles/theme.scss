@@ -1,0 +1,24 @@
+@use "@angular/material" as mat;
+
+@use "src/assets/styles/material/theme";
+@use "src/assets/styles/material/typography";
+@use "src/assets/styles/material/button";
+
+@include mat.core();
+
+$my-primary: mat.define-palette(theme.$palette);
+$my-accent: mat.define-palette(theme.$accent);
+
+$my-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $my-primary,
+            accent: $my-accent
+        ),
+        typography: typography.$my-custom-typography-config,
+        density: 0
+    )
+);
+
+@include mat.all-component-themes($my-theme);
+@include mat.typography-hierarchy(typography.$my-custom-typography-config);

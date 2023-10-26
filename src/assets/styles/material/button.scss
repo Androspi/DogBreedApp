@@ -1,0 +1,8 @@
+.mat-mdc-button.mat-mdc-button-base,
+.mat-mdc-raised-button.mat-mdc-button-base,
+.mat-mdc-unelevated-button.mat-mdc-button-base,
+.mat-mdc-outlined-button.mat-mdc-button-base {
+    --mdc-filled-button-container-shape: 1.5vmax;
+    padding: 1vmax 3vmax;
+    height: 3vmax !important;
+}

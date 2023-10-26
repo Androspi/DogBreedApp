@@ -1,0 +1,9 @@
+.logo {
+    :first-child {
+        color: var(--app-primary);
+    }
+
+    :last-child {
+        color: var(--app-cl1);
+    }
+}

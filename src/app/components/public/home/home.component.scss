@@ -1,0 +1,94 @@
+:host {
+    background: var(--app-bg1);
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.above-container {
+    --aspect-ratio: 16/9;
+    pointer-events: none;
+    position: absolute;
+    width: 60vw;
+    right: 0;
+    top: 0;
+
+    &::before {
+        padding-top: calc(100% / (var(--aspect-ratio)));
+        display: block;
+        content: "";
+    }
+
+    img.shape {
+        z-index: 1;
+    }
+
+    img.dog {
+        inset: unset !important;
+        bottom: -14.5% !important;
+        height: auto !important;
+        width: 40% !important;
+        left: 42% !important;
+        z-index: 2;
+    }
+}
+
+.below-container {
+    --aspect-ratio: 16/9;
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    width: 50vw;
+    bottom: 0;
+    left: 0;
+
+    &::before {
+        padding-top: calc(100% / (var(--aspect-ratio)));
+        display: block;
+        content: "";
+    }
+
+    img.shape {
+        z-index: 1;
+    }
+
+    img.dog {
+        inset: unset !important;
+        height: auto !important;
+        width: 60% !important;
+        left: 26% !important;
+        top: 10% !important;
+        z-index: 2;
+    }
+}
+
+.above-text {
+    justify-content: center;
+    flex-direction: column;
+    padding: 4vh 6vw;
+    display: flex;
+    height: 50vh;
+    width: 40vw;
+
+    h1 {
+        color: var(--app-cl1);
+    }
+
+    p {
+        color: var(--app-cl2);
+    }
+}
+
+.below-text {
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 50vw;
+    padding: 4vh 6vw;
+    display: flex;
+    height: 50vh;
+    width: 50vw;
+
+    h2 {
+        color: var(--app-cl1);
+    }
+}

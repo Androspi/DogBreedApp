@@ -1,0 +1,66 @@
+@use "@angular/material" as mat;
+
+$font-family: Poppins;
+
+$h1: mat.define-typography-level(
+    $font-family: $font-family,
+    $line-height: 4.5vmax,
+    $font-weight: 700,
+    $font-size: 4vmax
+);
+
+$h2: mat.define-typography-level(
+    $font-family: $font-family,
+    $line-height: 2.5vmax,
+    $font-weight: 500,
+    $font-size: 2vmax
+);
+
+$h3: mat.define-typography-level(
+    $font-family: $font-family,
+    $line-height: 2vmax,
+    $font-size: 1.5vmax,
+    $font-weight: 700
+);
+
+$h4: mat.define-typography-level(
+    $font-family: $font-family,
+    $line-height: 1.05vmax,
+    $font-size: 0.7vmax,
+    $font-weight: 700
+);
+
+$body-1: mat.define-typography-level(
+    $font-family: $font-family,
+    $font-weight: 400,
+    $font-size: 1.2vmax,
+    $line-height: 1.5vmax,
+    $letter-spacing: normal
+);
+
+$button: mat.define-typography-level(
+    $font-family: $font-family,
+    $font-weight: 300,
+    $font-size: 1.2vmax,
+    $line-height: 1.5vmax,
+    $letter-spacing: normal
+);
+
+$h6: mat.define-typography-level(
+    $font-family: $font-family,
+    $font-weight: 700,
+    $font-size: 1.5vmax,
+    $line-height: 2.25vmax
+);
+
+$my-custom-typography-config: mat.define-typography-config(
+    $button: $button,
+    $body-1: $body-1,
+    $subtitle-1: $h3,
+    $subtitle-2: $h4,
+    $headline-1: $h1,
+    $headline-2: $h2,
+    $headline-3: $h3,
+    $headline-4: $h4,
+    $headline-6: $h6
+);

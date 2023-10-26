@@ -1,0 +1,27 @@
+@use "src/assets/styles/utils/layout";
+
+:host {
+    display: contents;
+}
+
+#header {
+    --mat-toolbar-container-text-color: var(--app-bg1);
+    background: transparent;
+    position: relative;
+    padding: 0 6vw;
+    z-index: 2;
+
+    [routerlink] {
+        font-weight: 200;
+    }
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+@include layout.use-viewport(xsmall) {
+    #header {
+        --mat-toolbar-mobile-height: 36px;
+    }
+}

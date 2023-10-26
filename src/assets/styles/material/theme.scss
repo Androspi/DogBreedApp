@@ -1,0 +1,75 @@
+$palette: (
+    50: #efe5fd,
+    100: #d4bff9,
+    200: #b794f6,
+    300: #9965f4,
+    400: #7e3ff2,
+    500: #6002ee,
+    600: #5300e8,
+    700: #3d00e0,
+    800: #1c00db,
+    900: #0000d6,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff
+    )
+);
+
+$accent: (
+    50: #e2f1fd,
+    100: #b9dcfa,
+    200: #8cc6f7,
+    300: #5db0f3,
+    400: #379ff2,
+    500: #0090ef,
+    600: #0182e1,
+    700: #0070ce,
+    800: #005fbc,
+    900: #00419d,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #000000,
+        600: #000000,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff
+    )
+);
+
+$primary-color: map-get($palette, 500);
+$accent-color: map-get($accent, 500);
+
+$palette-background1: #f7f7f7;
+$palette-background2: #ffffff;
+
+$palette-color1: #121212;
+$palette-color2: #666666;
+
+$palette-shadow1: #81818129;
+$palette-shadow2: #393b442c;
+
+:root {
+    --app-primary: #{$primary-color};
+    --app-accent: #{$accent-color};
+
+    --app-bg1: #{$palette-background1};
+    --app-bg2: #{$palette-background2};
+
+    --app-cl1: #{$palette-color1};
+    --app-cl2: #{$palette-color2};
+
+    --app-sw1: #{$palette-shadow1};
+    --app-sw2: #{$palette-shadow2};
+}
