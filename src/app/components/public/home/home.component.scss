@@ -1,3 +1,5 @@
+@use "src/assets/styles/utils/layout";
+
 :host {
     background: var(--app-bg1);
     display: block;
@@ -75,7 +77,11 @@
     }
 
     p {
-        color: var(--app-cl2);
+        color: var(--app-cl3);
+    }
+
+    button {
+        margin-right: auto;
     }
 }
 
@@ -89,6 +95,31 @@
     width: 50vw;
 
     h2 {
-        color: var(--app-cl1);
+        color: var(--app-cl2);
+    }
+}
+
+@include layout.use-viewport(xsmall) {
+    .above-text {
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+
+        button {
+            margin-right: unset;
+        }
+    }
+
+    .below-text {
+        justify-content: flex-start;
+        text-align: center;
+        align-items: center;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .below-container {
+        width: 100vw;
     }
 }

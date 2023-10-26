@@ -1,8 +1,10 @@
+@use "src/assets/styles/utils/typography";
+
 .mat-mdc-button.mat-mdc-button-base,
 .mat-mdc-raised-button.mat-mdc-button-base,
 .mat-mdc-unelevated-button.mat-mdc-button-base,
 .mat-mdc-outlined-button.mat-mdc-button-base {
-    --mdc-filled-button-container-shape: 1.5vmax;
-    padding: 1vmax 3vmax;
-    height: 3vmax !important;
+    --mdc-filled-button-container-shape: #{typography.svmax(1.5)};
+    padding: typography.svmax(1) typography.svmax(3);
+    height: typography.svmax(3) !important;
 }

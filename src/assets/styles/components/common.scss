@@ -1,0 +1,7 @@
+@use "src/assets/styles/utils/layout";
+
+@include layout.use-viewport(xsmall) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}

@@ -55,7 +55,8 @@ $palette-background1: #f7f7f7;
 $palette-background2: #ffffff;
 
 $palette-color1: #121212;
-$palette-color2: #666666;
+$palette-color2: #333333;
+$palette-color3: #666666;
 
 $palette-shadow1: #81818129;
 $palette-shadow2: #393b442c;
@@ -69,6 +70,7 @@ $palette-shadow2: #393b442c;
 
     --app-cl1: #{$palette-color1};
     --app-cl2: #{$palette-color2};
+    --app-cl3: #{$palette-color3};
 
     --app-sw1: #{$palette-shadow1};
     --app-sw2: #{$palette-shadow2};

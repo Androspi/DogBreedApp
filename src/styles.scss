@@ -1,4 +1,6 @@
+@use "src/assets/styles/components/common";
 @use "src/assets/styles/components/utils";
+@use "src/assets/styles/utils/layout";
 
 * {
     box-sizing: border-box;
@@ -24,4 +26,10 @@ main {
 a:-webkit-any-link {
     text-decoration: none;
     color: inherit;
+}
+
+@include layout.use-viewport(xsmall) {
+    :root {
+        --scale-adjust: 1.75;
+    }
 }

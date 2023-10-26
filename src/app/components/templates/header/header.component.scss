@@ -1,5 +1,3 @@
-@use "src/assets/styles/utils/layout";
-
 :host {
     display: contents;
 }
@@ -18,10 +16,4 @@
 
 .spacer {
     flex: 1 1 auto;
-}
-
-@include layout.use-viewport(xsmall) {
-    #header {
-        --mat-toolbar-mobile-height: 36px;
-    }
 }

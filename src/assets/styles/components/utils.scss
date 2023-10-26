@@ -1,11 +1,13 @@
-$separations: (0, 0.25vmax, 0.5vmax, 1vmax, 1.5vmax, 2vmax, 3vmax);
+@use "src/assets/styles/utils/typography";
+
+$separations: (0, 0.25, 0.5, 1, 1.5, 2, 3);
 $separationClasses: (
     m: margin,
     p: padding
 );
 
 @for $i from 1 through length($separations) {
-    $value: nth($separations, $i);
+    $value: typography.svmax(nth($separations, $i));
     $index: $i - 1;
 
     @each $id, $className in ($separationClasses) {

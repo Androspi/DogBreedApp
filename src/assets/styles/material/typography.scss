@@ -1,56 +1,57 @@
+@use "src/assets/styles/utils/typography";
 @use "@angular/material" as mat;
 
 $font-family: Poppins;
 
 $h1: mat.define-typography-level(
     $font-family: $font-family,
-    $line-height: 4.5vmax,
+    $line-height: typography.svmax(4.5),
     $font-weight: 700,
-    $font-size: 4vmax
+    $font-size: typography.svmax(4)
 );
 
 $h2: mat.define-typography-level(
     $font-family: $font-family,
-    $line-height: 2.5vmax,
+    $line-height: typography.svmax(2.5),
     $font-weight: 500,
-    $font-size: 2vmax
+    $font-size: typography.svmax(2)
 );
 
 $h3: mat.define-typography-level(
     $font-family: $font-family,
-    $line-height: 2vmax,
-    $font-size: 1.5vmax,
+    $line-height: typography.svmax(2),
+    $font-size: typography.svmax(1.5),
     $font-weight: 700
 );
 
 $h4: mat.define-typography-level(
     $font-family: $font-family,
-    $line-height: 1.05vmax,
-    $font-size: 0.7vmax,
+    $line-height: typography.svmax(1.05),
+    $font-size: typography.svmax(0.7),
     $font-weight: 700
 );
 
 $body-1: mat.define-typography-level(
     $font-family: $font-family,
     $font-weight: 400,
-    $font-size: 1.2vmax,
-    $line-height: 1.5vmax,
+    $font-size: typography.svmax(1.2),
+    $line-height: typography.svmax(1.5),
     $letter-spacing: normal
 );
 
 $button: mat.define-typography-level(
     $font-family: $font-family,
     $font-weight: 300,
-    $font-size: 1.2vmax,
-    $line-height: 1.5vmax,
+    $font-size: typography.svmax(1.2),
+    $line-height: typography.svmax(1.5),
     $letter-spacing: normal
 );
 
 $h6: mat.define-typography-level(
     $font-family: $font-family,
     $font-weight: 700,
-    $font-size: 1.5vmax,
-    $line-height: 2.25vmax
+    $font-size: typography.svmax(1.5),
+    $line-height: typography.svmax(2.25)
 );
 
 $my-custom-typography-config: mat.define-typography-config(
