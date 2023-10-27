@@ -14,11 +14,15 @@ export class BreedsService {
     private http: HttpClient
   ) { }
 
-  images({ limit, breed }: BreedParams) {
+  images({ limit, find }: BreedParams) {
     let src = `${environment.api}`;
 
-    if (breed !== undefined) {
-      src += `breed/${breed}/images`;
+    if (find !== undefined) {
+      const [breed, subBreed] = find.split('-');
+
+      src += `breed/${breed}`;
+      if (subBreed) src += `/${subBreed}`;
+      src += `/images`;
       if (limit) src += `/random/${limit}`;
     } else {
       src += `breeds/image/random/${limit || 2}`;

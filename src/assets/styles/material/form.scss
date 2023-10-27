@@ -1,3 +1,5 @@
+@use "src/assets/styles/utils/typography";
+
 .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label,
 .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
     --mdc-filled-text-field-label-text-color: var(--app-primary);
@@ -17,9 +19,9 @@
 
 .mat-mdc-form-field {
     --mat-form-field-container-text-weight: 500;
-    --mdc-filled-text-field-label-text-size: 13px;
-    --mat-form-field-container-text-line-height: 27px;
-    --mat-form-field-container-text-size: 18px;
+    --mat-form-field-container-text-line-height: #{typography.svmax(1.6875)};
+    --mdc-filled-text-field-label-text-size: #{typography.svmax(0.8125)};
+    --mat-form-field-container-text-size: #{typography.svmax(1.125)};
 }
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {

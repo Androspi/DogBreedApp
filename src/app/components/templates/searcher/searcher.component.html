@@ -1,15 +1,13 @@
 <mat-form-field>
-    <mat-label class="text-uppercase">Buscar Personajes</mat-label>
+    <mat-label class="text-uppercase">Search a dog by breed or sub-breed</mat-label>
     <mat-icon matPrefix>search</mat-icon>
 
-    <input matInput type="search" placeholder="Buscar" id="input-searcher">
-    <!-- <input matInput [matAutocomplete]="auto" [formControl]="model.searchControl" type="search" placeholder="Buscar"
-        (dblclick)="model.searchControl.setValue('')" id="input-searcher">
+    <input matInput type="search" placeholder="Buscar" id="input-searcher" [matAutocomplete]="searcher"
+        [formControl]="control">
 
-    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayBreed" (optionSelected)="blur()">
-        <mat-option *ngFor="let breed of model.breeds.value" [value]="breed">
-            {{breed.text}}
+    <mat-autocomplete #searcher="matAutocomplete">
+        <mat-option *ngFor="let breed of filteredBreeds" [value]="breed">
+            {{breed}}
         </mat-option>
-    </mat-autocomplete> -->
-
+    </mat-autocomplete>
 </mat-form-field>

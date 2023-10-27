@@ -1,0 +1,8 @@
+@use "src/assets/styles/utils/typography";
+@use "src/assets/styles/utils/common";
+
+.mat-mdc-autocomplete-panel {
+    @extend %scrollbar;
+    --mat-option-label-text-line-height: #{typography.svmax(1.2)};
+    --mat-option-label-text-size: #{typography.svmax(0.8)};
+}

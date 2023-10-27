@@ -41,16 +41,12 @@ export class DogsComponent implements AfterViewInit, OnDestroy {
   ) { }
 
   ngAfterViewInit(): void {
-    setTimeout(() => { // ExpressionChangedAfterItHasBeenCheckedError
+    setTimeout(() => { // ExpressionChangedAfterItHasBeenCheckedError 
       this.queryParamSubscription$ = this.route.queryParams.subscribe(({ find = '' }) => {
         if (find != undefined) {
-          this.#replace({ breed: find || undefined, limit: find ? undefined : this.paginator.limit });
-
-          const searcher = document.querySelector<HTMLInputElement>('#input-searcher');
-          if (searcher) searcher.value = find;
+          this.#replace({ find: find || undefined, limit: find ? undefined : this.paginator.limit });
         }
       });
-
 
       const appHeight = () => this.isMobile = window.innerWidth < 600;
 
@@ -61,6 +57,10 @@ export class DogsComponent implements AfterViewInit, OnDestroy {
     }, 0);
   }
 
+  /**
+   * updates all images
+   * @param params filters
+   */
   #replace(params: BreedParams) {
     this.#getImages(params).then(images => {
       this.images = images;
@@ -70,6 +70,7 @@ export class DogsComponent implements AfterViewInit, OnDestroy {
     });
   }
 
+  /** load new images by scrolling */
   load() {
     if (this.gettingImages) return;
 
@@ -80,7 +81,7 @@ export class DogsComponent implements AfterViewInit, OnDestroy {
     const breed = this.breed;
 
     if (!breed) {
-      this.#getImages({ breed: undefined, limit: limit * 1.5 }).then(images => {
+      this.#getImages({ find: undefined, limit: limit * 1.5 }).then(images => {
         this.images = [...new Set([...this.images, ...images])];
         this.loadedImages = this.images.slice(0, limit * page);
         this.gettingImages = false;
@@ -97,6 +98,10 @@ export class DogsComponent implements AfterViewInit, OnDestroy {
     this.gettingImages = false;
   }
 
+  /**
+   * search for images
+   * @param params filters
+   */
   #getImages(params: BreedParams) {
     this.imageSubscription$?.unsubscribe();
 
