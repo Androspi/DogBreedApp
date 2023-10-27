@@ -1,0 +1,51 @@
+@use "src/assets/styles/utils/typography";
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label,
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label--float-above {
+    --mdc-filled-text-field-label-text-color: var(--app-primary);
+}
+
+.mdc-text-field--filled .mdc-floating-label {
+    --mdc-filled-text-field-label-text-weight: 600;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    --mdc-filled-text-field-input-text-color: var(--app-cl1);
+}
+
+.mat-mdc-input-element {
+    --mdc-filled-text-field-input-text-placeholder-color: var(--app-cl1);
+}
+
+.mat-mdc-form-field {
+    --mat-form-field-container-text-weight: 500;
+    --mat-form-field-container-text-line-height: #{typography.svmax(1.6875)};
+    --mdc-filled-text-field-label-text-size: #{typography.svmax(0.8125)};
+    --mat-form-field-container-text-size: #{typography.svmax(1.125)};
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    --mdc-filled-text-field-active-indicator-color: transparent;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-line-ripple::before {
+    --mdc-filled-text-field-hover-active-indicator-color: transparent;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+    --mdc-filled-text-field-focus-active-indicator-color: transparent;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    --mdc-filled-text-field-caret-color: var(--app-cl1);
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label,
+.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label--float-above {
+    --mdc-filled-text-field-focus-label-text-color: var(--app-primary);
+}
+
+.mat-mdc-form-field-hint-wrapper,
+.mat-mdc-form-field-error-wrapper {
+    padding: 0 !important;
+}

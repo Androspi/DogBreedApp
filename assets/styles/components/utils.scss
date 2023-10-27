@@ -1,0 +1,49 @@
+@use "src/assets/styles/utils/typography";
+
+$separations: (0, 0.25, 0.5, 1, 1.5, 2, 3);
+$separationClasses: (
+    m: margin,
+    p: padding
+);
+
+@for $i from 1 through length($separations) {
+    $value: typography.svmax(nth($separations, $i));
+    $index: $i - 1;
+
+    @each $id, $className in ($separationClasses) {
+        .#{$id}s-#{$index} {
+            #{$className}-left: #{$value} !important;
+        }
+
+        .#{$id}e-#{$index} {
+            #{$className}-right: #{$value} !important;
+        }
+
+        .#{$id}t-#{$index} {
+            #{$className}-top: #{$value} !important;
+        }
+
+        .#{$id}b-#{$index} {
+            #{$className}-bottom: #{$value} !important;
+        }
+
+        .#{$id}-#{$index} {
+            @extend .#{$id}s-#{$index};
+            @extend .#{$id}e-#{$index};
+            @extend .#{$id}t-#{$index};
+            @extend .#{$id}b-#{$index};
+        }
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.c-pointer {
+    cursor: pointer;
+}

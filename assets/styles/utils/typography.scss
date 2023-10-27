@@ -1,0 +1,3 @@
+@function svmax($n) {
+    @return calc(#{$n}vmax * var(--scale-adjust, 1));
+}

@@ -1,0 +1,23 @@
+%scrollbar {
+    &::-webkit-scrollbar {
+        background-color: #ffffff;
+        height: 1vmax;
+        cursor: grab;
+        width: 1vmin;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 0.4rem solid #cfcfcf;
+        background-color: #cfcfcf;
+        background-clip: content-box;
+        border-radius: 1.33rem;
+
+        &:hover {
+            background-color: #ffffff;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        --webkit-box-shadow: inset 0 0 1vmin #ffffff;
+    }
+}
