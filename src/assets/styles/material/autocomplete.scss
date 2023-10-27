@@ -6,3 +6,7 @@
     --mat-option-label-text-line-height: #{typography.svmax(1.2)};
     --mat-option-label-text-size: #{typography.svmax(0.8)};
 }
+
+.mat-mdc-option {
+    min-height: typography.svmax(3) !important;
+}

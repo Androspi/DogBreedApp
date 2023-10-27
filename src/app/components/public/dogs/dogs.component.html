@@ -17,11 +17,13 @@
     <mat-grid-list [cols]="isMobile ? 2 : 6" rowHeight="17:20" gutterSize="17px">
         <mat-grid-tile *ngFor="let image of loadedImages">
             <div class="simple-card c-pointer">
+                <canvas appConfetti #confetti="appConfetti"></canvas>
+
                 <img class="background-image" [ngSrc]="image" fill
                     (error)="$any($event.target).src = 'assets/images/dog-adopted.jpg'" />
 
-                <button class="floating-element adopt-btn" float="right/top" mat-mini-fab matTooltip="Adopt"
-                    color="primary" aria-label="Adopt" [routerLink]="['/dog', 'breed']">
+                <button appWaitingBtn class="floating-element adopt-btn" float="right/top" mat-mini-fab
+                    matTooltip="Adopt" color="primary" aria-label="Adopt" (click)="confetti.animate()">
                     <mat-icon>pets</mat-icon>
                 </button>
 

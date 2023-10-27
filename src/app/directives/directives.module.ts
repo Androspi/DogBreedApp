@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 
+import { WaitingBtnDirective } from './waiting-btn.directive';
+import { ConfettiDirective } from './confetti.directive';
 import { BreedDirective } from './breed.directive';
 
 const directives: any[] = [
-    BreedDirective
+    WaitingBtnDirective,
+    ConfettiDirective,
+    BreedDirective,
 ];
 
 @NgModule({

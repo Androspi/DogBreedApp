@@ -7,6 +7,12 @@
     display: flex;
 }
 
+:host ::ng-deep {
+    .header-link {
+        color: var(--app-cl1);
+    }
+}
+
 #dogs-content {
     padding: 0 8vw 2vh;
     overflow: auto;
@@ -33,6 +39,12 @@
         > img {
             filter: brightness(120%);
         }
+    }
+
+    canvas {
+        pointer-events: none;
+        position: absolute;
+        z-index: 3;
     }
 }
 
