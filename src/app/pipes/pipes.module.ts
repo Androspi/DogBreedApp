@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 
-const pipes: any[] = []
+import { QueryParamPipe } from './query-param.pipe';
+
+const pipes: any[] = [
+    QueryParamPipe
+];
 
 @NgModule({
     declarations: pipes,

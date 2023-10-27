@@ -26,8 +26,8 @@ $h3: mat.define-typography-level(
 
 $h4: mat.define-typography-level(
     $font-family: $font-family,
-    $line-height: typography.svmax(1.05),
-    $font-size: typography.svmax(0.7),
+    $line-height: typography.svmax(1.6),
+    $font-size: typography.svmax(1.2),
     $font-weight: 700
 );
 
@@ -47,11 +47,18 @@ $button: mat.define-typography-level(
     $letter-spacing: normal
 );
 
+$h5: mat.define-typography-level(
+    $font-family: $font-family,
+    $line-height: typography.svmax(1.5),
+    $font-size: typography.svmax(1),
+    $font-weight: 700
+);
+
 $h6: mat.define-typography-level(
     $font-family: $font-family,
-    $font-weight: 700,
-    $font-size: typography.svmax(1.5),
-    $line-height: typography.svmax(2.25)
+    $line-height: typography.svmax(1.05),
+    $font-size: typography.svmax(0.7),
+    $font-weight: 700
 );
 
 $my-custom-typography-config: mat.define-typography-config(
@@ -63,5 +70,6 @@ $my-custom-typography-config: mat.define-typography-config(
     $headline-2: $h2,
     $headline-3: $h3,
     $headline-4: $h4,
+    $headline-5: $h5,
     $headline-6: $h6
 );

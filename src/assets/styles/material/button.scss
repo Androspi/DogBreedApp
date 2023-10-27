@@ -8,3 +8,10 @@
     padding: typography.svmax(1) typography.svmax(3);
     height: typography.svmax(3) !important;
 }
+
+.mat-mdc-snack-bar-action.mat-mdc-button-base {
+    height: 3rem !important;
+    font-size: 1rem;
+    width: 1rem;
+    padding: 0;
+}

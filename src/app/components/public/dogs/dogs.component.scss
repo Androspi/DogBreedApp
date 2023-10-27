@@ -1,0 +1,52 @@
+@use "src/assets/styles/utils/layout";
+
+:host {
+    background: var(--app-bg1);
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+}
+
+#dogs-content {
+    padding: 0 8vw 2vh;
+    overflow: auto;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.adopt-btn {
+    z-index: 2;
+}
+
+.mat-grid-tile {
+    box-shadow: 0px 6px 10px var(--app-sw1);
+    overflow: visible !important;
+}
+
+.simple-card {
+    > img {
+        transition: all 0.5s ease;
+        opacity: 1;
+    }
+
+    &:hover {
+        > img {
+            filter: brightness(120%);
+        }
+    }
+}
+
+#filter-section {
+    border-radius: 0 0 8px 8px;
+    background: var(--app-bg1);
+    padding-bottom: 0.5rem;
+    display: inline-flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: -10px;
+    position: sticky;
+    z-index: 5;
+    top: 0;
+}

@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 
-const directives: any[] = [];
+import { BreedDirective } from './breed.directive';
+
+const directives: any[] = [
+    BreedDirective
+];
 
 @NgModule({
     declarations: directives,

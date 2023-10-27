@@ -1,5 +1,23 @@
 @use "src/assets/styles/utils/layout";
 
+.floating-element {
+    position: absolute !important;
+    z-index: 1;
+
+    &[float*="bottom"] {
+        bottom: 5%;
+    }
+    &[float*="right"] {
+        right: 5%;
+    }
+    &[float*="left"] {
+        left: 5%;
+    }
+    &[float*="top"] {
+        top: 5%;
+    }
+}
+
 @include layout.use-viewport(xsmall) {
     .hide-on-mobile {
         display: none !important;

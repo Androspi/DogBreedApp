@@ -1,0 +1,36 @@
+<app-header />
+<app-searcher />
+
+<article id="dogs-content" #section infiniteScroll [infiniteScrollDistance]="0.5" [infiniteScrollThrottle]="50"
+    [scrollWindow]="false" (scrolled)="load()">
+
+    <section id="filter-section" *ngIf="'find' | queryParam | async">
+        <h5 class="mat-headline-5 m-0 me-3" style="font-weight: 500; color: var(--app-cl2); line-height: 2.2rem;">
+            {{loadedImages.length}}/{{images.length}} resultados
+        </h5>
+    </section>
+
+    <ng-container *ngIf="!loadedImages.length">
+        <p>No hay personajes disponibles</p>
+    </ng-container>
+
+    <mat-grid-list [cols]="isMobile ? 2 : 6" rowHeight="17:20" gutterSize="17px">
+        <mat-grid-tile *ngFor="let image of loadedImages">
+            <div class="simple-card c-pointer">
+                <img class="background-image" [ngSrc]="image" fill
+                    (error)="$any($event.target).src = 'assets/images/dog-adopted.jpg'" />
+
+                <button class="floating-element adopt-btn" float="right/top" mat-mini-fab matTooltip="Adopt"
+                    color="primary" aria-label="Adopt" [routerLink]="['/dog', 'breed']">
+                    <mat-icon>pets</mat-icon>
+                </button>
+
+                <div class="content scrollbar">
+                    <img class="background-image" ngSrc="assets/images/shape-below.svg" fill />
+                    <div [appBreed]="image"></div>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</article>

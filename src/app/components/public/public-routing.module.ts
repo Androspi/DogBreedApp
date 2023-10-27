@@ -7,6 +7,7 @@ const routes: Routes = [{
   component: PublicComponent,
   path: '',
   children: [
+    { path: 'dogs', loadComponent: () => import('./dogs/dogs.component').then(e => e.DogsComponent) },
     { path: 'home', loadComponent: () => import('./home/home.component').then(e => e.HomeComponent) },
     { path: '**', pathMatch: 'full', redirectTo: '/home' }
   ]
